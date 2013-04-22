@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/row_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_marginBottom="-60dp"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <com.liwt.expandabletoolbar.CustomButton
+            android:id="@+id/button1"
+            android:layout_width="90dp"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:text="@string/edit" />
+
+        <com.liwt.expandabletoolbar.CustomButton
+            android:id="@+id/button2"
+            android:layout_width="90dp"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:text="@string/copy" />
+
+        <com.liwt.expandabletoolbar.CustomButton
+            android:id="@+id/button3"
+            android:layout_width="90dp"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:text="@string/delete" />
+    </LinearLayout>
+
+</LinearLayout>

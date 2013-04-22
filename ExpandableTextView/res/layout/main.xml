@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.liwt.expandabletextview.ExpandableTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFAA0000"
+            android:text="Line #1: ExpandableTextView has less than 3 lines."
+            android:textColor="#FFFFFF" />
+
+        <com.liwt.expandabletextview.ExpandableTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FF00AA00"
+            android:text="Line #1: ExpandableTextView has 3 lines\nLine #2\nLine #3"
+            android:textColor="#FFFFFF" />
+
+        <com.liwt.expandabletextview.ExpandableTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FF0000AA"
+            android:text="Line #1: ExpandableTextView has more than 3 lines\nLine #2\nLine #3\nLine #4\nLine #5\nLine #6"
+            android:textColor="#FFFFFF" />
+
+        <com.liwt.expandabletextview.ExpandableTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FFAA0000"
+            android:text="Line #1: ExpandableTextView has more than 3 lines\nLine #2: Is expanded\nLine #3\nLine #4\nLine #5\nLine #6"
+            android:textColor="#FFFFFF"
+            app:expanded="true" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.liwt.expandabletextview.ExpandableTextView
+                android:id="@+id/can_not_expand"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#FF00AA00"
+                android:textColor="#FFFFFF"
+                app:expandable="false" />
+
+            <ToggleButton
+                android:id="@+id/enable_expand"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textOff="Enable"
+                android:textOn="Disable" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.liwt.expandabletextview.ExpandableTextView
+                android:id="@+id/lines_manual"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#FF0000AA"
+                android:text="Line #1: ExpandableTextView has more than 3 lines\nLine #2: Change lines manual\nLine #3\nLine #4\nLine #5\nLine #6"
+                android:textColor="#FFFFFF" />
+
+            <ToggleButton
+                android:id="@+id/change_lines"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textOff="3 lines"
+                android:textOn="4 lines" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <com.liwt.expandabletextview.ExpandableTextView
+                android:id="@+id/toggle_text_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFAA0000"
+                android:text="Line #1: ExpandableTextView has more than 3 lines\nLine #2: Collapse Lines is 5\nLine #3\nLine #4\nLine #5\nLine #6"
+                android:textColor="#FFFFFF"
+                app:collapse_lines="5" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/expand"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Expand" />
+
+                <Button
+                    android:id="@+id/collapse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Collapse" />
+
+                <Button
+                    android:id="@+id/toggle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Toggle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.liwt.expandabletextview.ExpandableTextView
+            android:id="@+id/set_text_after_more_than_collapse_lines"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <com.liwt.expandabletextview.ExpandableTextView
+            android:id="@+id/set_text_after_less_than_collapse_lines"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>

@@ -18,7 +18,7 @@ import android.widget.Toast;
  * 
  */
 public class Sample extends Activity {
-	private final int ANIMATION_DURATION = 200;
+	private final int ANIMATION_DURATION = 400;
 
 	// private AlertDialog alertDialog;
 
@@ -62,7 +62,7 @@ public class Sample extends Activity {
 						.findViewById(R.id.button1);
 				button1.setOnClickListener(new View.OnClickListener() {
 					public void onClick(View v) {
-						Toast.makeText(getApplicationContext(), "Äãµã»÷ÁËÎÒ",
+						Toast.makeText(getApplicationContext(), "ä½ ç‚¹å‡»äº†æˆ‘",
 								Toast.LENGTH_SHORT).show();
 					}
 				});
